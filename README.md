@@ -2,8 +2,7 @@
     <img alt="Timeline.App" title="Timeline.App" src=".github/images/logotype.png" width="150px" />
 </h2>
 
-<h5 align="center">✅ Um projeto para registro de tarefas do usuário</h5>
-<h1></h1>
+<p align="center">✅ Um projeto para registro de tarefas do usuário</p>
 
 
 <p align="center">

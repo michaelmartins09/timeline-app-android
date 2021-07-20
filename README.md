@@ -46,7 +46,7 @@ Esse projeto visa atender às necessidades de usuários para registro e controle
 
 ## 🔖 Layout
 
-O layout elaborado para esse projeto, foi a partir de um wireframe  disponibilizado por terceiros. Para tornar o wirefram com layout de alta fidelidade, foi criado um projeto no [Figma](https://www.figma.com/about/) para os devidos ajustes e criação dos esquemas de cores. O projeto e o wireframe estão registrados no seguinte projeto: [Timeline App - Figma](https://github.com/michaelmartins09/caru_covid_flutter/tree/master/prototype).
+O layout elaborado para esse projeto, foi a partir de um wireframe  disponibilizado por terceiros. Para tornar o wirefram com layout de alta fidelidade, foi criado um projeto no [Figma](https://www.figma.com/about/) para os devidos ajustes e criação dos esquemas de cores. O projeto e o wireframe estão registrados no seguinte projeto: [Timeline App - Figma](https://www.figma.com/file/v4xQRx1ZCW19WNj79HOMDN/Agendor-Teste-Mobile?node-id=0%3A1).
 
 ## 🤔 Como contribuir?
 

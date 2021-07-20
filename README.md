@@ -22,6 +22,7 @@
 <p align="center">
   <img alt="Caru Covid19 - Screenshots" src=".github/images/app.png" width="100%">
 </p>
+<p align="center">Clique na imagem para expandir</p>
 
 ## 🚀 Tecnologias
 

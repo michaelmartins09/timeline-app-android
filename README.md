@@ -39,7 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias, bibliotecas e arquit
 
 Esse projeto visa atender às necessidades de usuários para registro e controle de suas tarefas no dia-a-dia. Com o aplicativo é possível registrar tarefas, atribindo tipo, data e horário, nome de cliente e descrição da tarefa.
 
-### > Banco de dados
+### > Estrutura de dados
 <p align="center">
     <img alt="Caru Covid19 - Screenshots" src=".github/images/database.png" width="30%">
     <h5 align="center">Foi necessário para esse projeto apenas uma tabela no banco de dados. </h5>

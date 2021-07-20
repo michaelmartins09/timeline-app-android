@@ -4,13 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.sqlite.db.SupportSQLiteDatabase
 import br.com.timeline.app.android.services.dao.ITaskDAO
 import br.com.timeline.app.android.entities.Task
-import br.com.timeline.app.android.utils.TaskType
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import java.util.*
 
 @Database(entities = [Task::class], version = 1, exportSchema = false)
 abstract class TaskRoomDatabase: RoomDatabase() {

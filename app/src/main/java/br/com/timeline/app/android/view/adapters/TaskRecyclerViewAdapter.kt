@@ -9,7 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.*
 import br.com.timeline.app.android.R
 import br.com.timeline.app.android.entities.Task
-import br.com.timeline.app.android.utils.TaskType
+import br.com.timeline.app.android.utils.enums.TaskType
+import br.com.timeline.app.android.utils.format.FormatDate
+import br.com.timeline.app.android.utils.functions.FunctionsHelper
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -42,9 +44,10 @@ class TaskRecyclerViewAdapter : ListAdapter<Task, TaskRecyclerViewAdapter.TaskVi
     @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = getItem(position)
-        val img = getImageTaskTypeByEnum(task.type)
-        val weekday: String = SimpleDateFormat("EE", Locale("pt", "BR")).format(Date(task.date))
-        val hoursAndMinutes = SimpleDateFormat("HH:mm").format(Date(task.date))
+        val img = FunctionsHelper.getIconByTaskType(task.type)
+        val date = Date(task.date)
+        val weekday: String = FormatDate.getWeekday(date)
+        val hoursAndMinutes = FormatDate.getTime(date)
 
         when (position) {
             itemCount - 1 -> holder.viewDividerBottom.visibility = View.INVISIBLE
@@ -56,16 +59,6 @@ class TaskRecyclerViewAdapter : ListAdapter<Task, TaskRecyclerViewAdapter.TaskVi
         holder.imgType.setImageResource(img)
         holder.txtDescription.text = task.description
         holder.txtClient.text = task.client
-    }
-
-    private fun getImageTaskTypeByEnum(type: TaskType) = when(type) {
-        TaskType.CALL -> R.drawable.ic_phone
-        TaskType.MAIL -> R.drawable.ic_mail
-        TaskType.VISIT -> R.drawable.ic_map_pin
-        TaskType.NONE -> R.drawable.ic_more
-        TaskType.REUNION -> R.drawable.ic_icon_briefcase
-        TaskType.PROPOSAL -> R.drawable.ic_file_text
-        TaskType.MORE -> R.drawable.ic_more
     }
 
     companion object {

@@ -21,8 +21,8 @@ import br.com.timeline.app.android.R
 import br.com.timeline.app.android.databinding.TimelineActivityBinding
 import br.com.timeline.app.android.init.TimelineApplication
 import br.com.timeline.app.android.view.adapters.*
+import br.com.timeline.app.android.view.dialog.AddTaskDialog
 import br.com.timeline.app.android.viewmodel.*
-import java.util.*
 
 class TimelineActivity : AppCompatActivity() {
 
@@ -47,28 +47,7 @@ class TimelineActivity : AppCompatActivity() {
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        taskViewModel.allTasks.observe(this) { tasks ->
-            tasks.let { recyclerAdapter.submitList(it) }
-            val params = binding.appBar.layoutParams
-            val layoutSummary: LinearLayout = findViewById(R.id.layout_view_summary)
-            if (tasks.isEmpty()) {
-                binding.layoutEmptyList.viewEmptyList.visibility = View.VISIBLE
-                layoutSummary.visibility = View.INVISIBLE
-                params.height = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP,
-                    100.toFloat(),
-                    resources.displayMetrics
-                ).toInt()
-            } else {
-                binding.layoutEmptyList.viewEmptyList.visibility = View.INVISIBLE
-                layoutSummary.visibility = View.VISIBLE
-                params.height = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP,
-                    160.toFloat(),
-                    resources.displayMetrics
-                ).toInt()
-            }
-        }
+        initObserverAllTasks(binding, recyclerAdapter)
 
         initViewAndAddViewModelListener()
 
@@ -79,6 +58,8 @@ class TimelineActivity : AppCompatActivity() {
             ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white)
         ))
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
@@ -112,6 +93,30 @@ class TimelineActivity : AppCompatActivity() {
         taskViewModel
     ).show(supportFragmentManager, AddTaskDialog.TAG)
 
+    private fun initObserverAllTasks(binding: TimelineActivityBinding, adapter: TaskRecyclerViewAdapter) {
+        taskViewModel.allTasks.observe(this) { tasks ->
+            tasks.let { adapter.submitList(it) }
+            val params = binding.appBar.layoutParams
+            val layoutSummary: LinearLayout = findViewById(R.id.layout_view_summary)
+            if (tasks.isEmpty()) {
+                binding.layoutEmptyList.viewEmptyList.visibility = View.VISIBLE
+                layoutSummary.visibility = View.INVISIBLE
+                params.height = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    100.toFloat(),
+                    resources.displayMetrics
+                ).toInt()
+            } else {
+                binding.layoutEmptyList.viewEmptyList.visibility = View.INVISIBLE
+                layoutSummary.visibility = View.VISIBLE
+                params.height = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP,
+                    160.toFloat(),
+                    resources.displayMetrics
+                ).toInt()
+            }
+        }
+    }
     private fun initViewAndAddViewModelListener() {
         val txtVisits = findViewById<TextView>(R.id.txt_visits)
         val txtCalls = findViewById<TextView>(R.id.txt_calls)

@@ -3,8 +3,6 @@ package br.com.timeline.app.android.view.adapters
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -17,9 +15,8 @@ import androidx.core.widget.ImageViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import br.com.timeline.app.android.R
 import br.com.timeline.app.android.entities.MenuType
-import br.com.timeline.app.android.utils.TaskType
+import br.com.timeline.app.android.utils.enums.TaskType
 import br.com.timeline.app.android.viewmodel.TaskViewModel
-import kotlinx.coroutines.selects.select
 import kotlin.collections.ArrayList
 
 class MenuTypesRecyclerViewAdapter(

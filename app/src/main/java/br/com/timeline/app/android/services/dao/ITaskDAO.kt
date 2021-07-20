@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import br.com.timeline.app.android.entities.Task
-import br.com.timeline.app.android.utils.TaskType
+import br.com.timeline.app.android.utils.enums.TaskType
 import kotlinx.coroutines.flow.Flow
 
 @Dao

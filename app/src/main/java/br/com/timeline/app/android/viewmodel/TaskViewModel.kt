@@ -3,7 +3,7 @@ package br.com.timeline.app.android.viewmodel
 import androidx.lifecycle.*
 import br.com.timeline.app.android.entities.Task
 import br.com.timeline.app.android.services.repository.TaskRepository
-import br.com.timeline.app.android.utils.TaskType
+import br.com.timeline.app.android.utils.enums.TaskType
 import kotlinx.coroutines.launch
 
 class TaskViewModel(private val repository: TaskRepository) : ViewModel() {

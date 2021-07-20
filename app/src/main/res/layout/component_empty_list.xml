@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/viewEmptyList"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp"
+        android:gravity="left|bottom">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_line_dash" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/ic_icon_task"
+            android:layout_marginStart="50dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_tasks_title"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_sub_title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_add_new_task"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_description"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

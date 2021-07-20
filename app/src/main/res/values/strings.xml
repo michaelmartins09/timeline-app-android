@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Timeline</string>
+
+    <string name="summary_visits">VISITAS</string>
+    <string name="summary_calls">LIGAÇÕES</string>
+    <string name="summary_mails">E-MAILS</string>
+    <string name="summary_proposal">PROPOSTA</string>
+    <string name="summary_reunion">REUNIÃO</string>
+    <string name="summary_more">OUTROS</string>
+
+    <string name="button_add_task">AGENDAR TAREFA</string>
+
+    <string name="hint_message">Digite aqui...</string>
+
+    <string name="empty_tasks_title">No momento não há tarefas registradas.</string>
+
+    <string name="tip_add_new_task">Crie uma nova tarefa no botão acima (+)</string>
+
+    <string name="clear_tasks">Limpar tarefas</string>
+
+</resources>

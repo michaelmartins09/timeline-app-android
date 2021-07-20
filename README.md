@@ -59,7 +59,7 @@ O layout elaborado para esse projeto, foi a partir de um wireframe  disponibiliz
 
 ## 📝 Licença
 
-Esse projeto possui a MIT license. Veja a [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto possui a MIT license. Veja a [LICENÇA](LICENSE) para mais detalhes.
 
 ---
 
